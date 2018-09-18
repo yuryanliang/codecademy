@@ -1,15 +1,35 @@
-//A basic Calculator
 public class Calculator{
-    int a;
-    int b;
+    Calculator(){
 
-    public static int addTwo(int a, int b){
-        int sum = a + b;
-        return sum;
+    }
+    public  int add(int a , int b){
+        return a + b;
+    }
+    public  int subtract(int a , int b){
+        return a - b;
+    }
+    public  int multiply(int a , int b){
+        return a * b;}
+    public int divide(int a , int b){
+        if (b == 0){
+            System.out.println("Error! Dividing by zero is not allowed.");
+            return 0;
+        }else{
+            return a/b;
+        }
+    }
+    public int modulo(int a, int b){
+        if (b == 0){
+            System.out.println("Error! Dividing by zero is not allowed.");
+            return 0;
+        }else{
+            return a%b;
+        }
     }
     public static void main(String[] args){
-        Calculator cal = new Calculator();
-        int sum = cal.addTwo(4, 5);
-        System.out.println("sum is " + sum);
+        Calculator myCalculator = new Calculator();
+        System.out.println(myCalculator.add(5, 7));
+        System.out.println(myCalculator.subtract(45, 11));
+
     }
 }
